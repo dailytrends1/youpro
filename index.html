@@ -3,114 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Clothing Program</title>
+<title>Meet Someone New Today</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:#f5f5f5;
+background:linear-gradient(135deg,#ff5f6d,#ffc371);
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+min-height:100vh;
 padding:20px;
 }
 
-.card{
-background:white;
+.container{
 width:100%;
-max-width:400px;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+max-width:420px;
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+animation:fade .6s ease;
+}
+
+.hero{
+height:240px;
+background:url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900") center/cover;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+font-size:28px;
+font-weight:bold;
+text-align:center;
+padding:20px;
+}
+
+.content{
+padding:25px;
 text-align:center;
 }
 
-h1{
-font-size:24px;
-margin-bottom:10px;
+h2{
+color:#ff3f6c;
+margin-bottom:15px;
 }
 
 p{
-color:#666;
-margin-bottom:25px;
-}
-
-.options{
-display:flex;
-gap:10px;
+color:#555;
+line-height:1.7;
 margin-bottom:20px;
 }
 
-.option{
-flex:1;
-padding:15px;
-border:2px solid #ddd;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
+.features{
+text-align:left;
+margin:20px 0;
 }
 
-.option.selected{
-background:#4CAF50;
-color:white;
-border-color:#4CAF50;
+.features p{
+margin:10px 0;
+font-size:15px;
 }
 
-button{
+.btn{
+display:block;
 width:100%;
-padding:15px;
-background:#000;
-color:white;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
+padding:18px;
+background:#ff3f6c;
+color:#fff;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
 }
 
-button:hover{
-opacity:0.9;
+.btn:hover{
+background:#e91e63;
+transform:scale(1.02);
+}
+
+.notice{
+font-size:13px;
+color:#777;
+margin-top:18px;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 </head>
+
 <body>
 
-<div class="card">
+<div class="container">
 
-<h1>👕 Free Clothing Program</h1>
-
-<p>Are you currently living in Nigeria?</p>
-
-<div class="options">
-<div class="option" onclick="selectOption(this)">Yes</div>
-<div class="option" onclick="selectOption(this)">No</div>
+<div class="hero">
+<div class="overlay">
+Ready to Meet Someone New?
+</div>
 </div>
 
-<button onclick="continueNow()">CONTINUE</button>
+<div class="content">
+
+<h2>Connect with New People</h2>
+
+<p>
+Join thousands of people who are looking to make new friendships and meaningful connections.
+</p>
+
+<div class="features">
+
+<p>💬 Start chatting in minutes</p>
+
+<p>🌍 Meet people from different countries</p>
+
+<p>❤️ Find genuine conversations</p>
+
+<p>✨ Quick and easy to get started</p>
 
 </div>
 
-<script>
+<a href="https://blogs.exbowl.com/get-paid-e25000-to-move-to-germany-with-visa-sponsored-opportunities/" class="btn">
+Continue →
+</a>
 
-function selectOption(element){
-document.querySelectorAll('.option').forEach(opt=>{
-opt.classList.remove('selected');
-});
-element.classList.add('selected');
-}
+<div class="notice">
+By continuing, you'll be taken to our partner platform where you can create an account and start connecting.
+</div>
 
-function continueNow(){
-window.location.href = "https://blogs.exbowl.com/get-paid-e25000-to-move-to-germany-with-visa-sponsored-opportunities/";
-}
+</div>
 
-</script>
+</div>
 
 </body>
 </html>
-
